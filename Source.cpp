@@ -41,18 +41,27 @@ int main()
 
 {
     
-
+    char b[15] = "tab idet nahui";
     char str[50] = "";
     fgets(str, 50, stdin);
-    for (int i = 0; str[i] != '\n'; i++) {
-        if ((str[i] <= 'a' && str[i] >= 'z') || (str[i] <= 'A' && str[i] >= 'Z')) {
-            return 1;
+    int c = myStrlen(str);
+    for (int i = 0; i<=c ; i++) {
+        if (((str[i] >= 'a') && (str[i] <= 'z')) || ((str[i] >= 'A') && (str[i] <= 'Z'))) {
+           
+                if (i = c) {
+                    printReverse(str);
+                }
+            
         }
-        
+        else {
+            str[i] = ' ';
+            if (i = c) {
+                printReverse(str);
+           }
+        }
     }
     
-    
-    printReverse(str); 
+     
     return 0;
 
 }
